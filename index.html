@@ -4,10 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>knowyouronion</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="output.css" />
     <script async src="index.js"></script>
   </head>
-  <body>
-    <h1>knowyouronion</h1>
+  <body class="flex bg-gray-50 items-center justify-center h-screen">
+    <div
+      class="w-2/4 bg-white flex-col rounded-xl justify-between items-center shadow-lg text-2xl shadow-indigo-100/55"
+    >
+      <div class="flex justify-between px-5 py-3 cursor-pointer" id="stateSelector">
+        Select State
+        <img src="assets/down-arrow-svgrepo-com.svg" width="20rem" alt="" />
+      </div>
+      <ul class="bg-gray-50 py-1 hidden absolute w-1/2 " id="stateList">
+        <li class="text-xl py-0.5 px-5 hover:bg-gray-100">fasdl</li class="text-xl py-0.5 hover:bg-gray-100">
+        <li class="text-xl py-0.5 px-5 hover:bg-gray-100">fasdl</li class="text-xl py-0.5 hover:bg-gray-100">
+        <li class="text-xl py-0.5 px-5 hover:bg-gray-100">fasdl</li class="text-xl py-0.5 hover:bg-gray-100">
+        <li class="text-xl py-0.5 px-5 hover:bg-gray-100">fasdl</li class="text-xl py-0.5 hover:bg-gray-100">
+      </ul>
+
+      <div class="flex justify-between px-5 py-3">
+        Select District
+        <img src="assets/down-arrow-svgrepo-com.svg" width="20rem" alt="" />
+      </div>
+      <div class="flex justify-between px-5 py-3">
+        Select Market
+        <img src="assets/down-arrow-svgrepo-com.svg" width="20rem" alt="" />
+      </div>
+      <div class="flex justify-between px-5 py-3">
+        Select Commodity
+        <img src="assets/down-arrow-svgrepo-com.svg" width="20rem" alt="" />
+      </div>
+    </div>
   </body>
 </html>
