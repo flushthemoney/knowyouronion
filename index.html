@@ -11,15 +11,27 @@
     <div
       class="w-2/4 bg-white flex-col rounded-xl justify-between items-center shadow-lg text-2xl shadow-indigo-100/55"
     >
-      <div class="flex justify-between px-5 py-3 cursor-pointer" id="stateSelector">
+      <div
+        class="flex justify-between px-5 py-3 cursor-pointer"
+        id="stateSelector"
+      >
         Select State
         <img src="assets/down-arrow-svgrepo-com.svg" width="20rem" alt="" />
       </div>
-      <ul class="bg-gray-50 py-1 hidden absolute w-1/2 " id="stateList">
-        <li class="text-xl py-0.5 px-5 hover:bg-gray-100">fasdl</li class="text-xl py-0.5 hover:bg-gray-100">
-        <li class="text-xl py-0.5 px-5 hover:bg-gray-100">fasdl</li class="text-xl py-0.5 hover:bg-gray-100">
-        <li class="text-xl py-0.5 px-5 hover:bg-gray-100">fasdl</li class="text-xl py-0.5 hover:bg-gray-100">
-        <li class="text-xl py-0.5 px-5 hover:bg-gray-100">fasdl</li class="text-xl py-0.5 hover:bg-gray-100">
+      <ul
+        class="bg-gray-50 hidden absolute w-1/2 overflow-y-auto max-h-40"
+        id="stateList"
+      >
+        <div class="flex items-center px-2 sticky top-0 bg-white my-0">
+          <img src="./assets/search-svgrepo-com.svg" alt="" width="20rem" />
+          <input
+            type="text"
+            name=""
+            id="stateSearch"
+            placeholder="Enter State Name"
+            class="placeholder:text-gray-500 text-xl m-2 w-full"
+          />
+        </div>
       </ul>
 
       <div class="flex justify-between px-5 py-3">
