@@ -15,7 +15,7 @@
         class="flex justify-between px-5 py-3 cursor-pointer"
         id="stateSelector"
       >
-        Select State
+        <span>Select State</span>
         <img src="assets/down-arrow-svgrepo-com.svg" width="20rem" alt="" />
       </div>
       <ul
@@ -27,7 +27,7 @@
         class="flex justify-between px-5 py-3 cursor-pointer"
         id="districtSelector"
       >
-        Select District
+        <span>Select District</span>
         <img src="assets/down-arrow-svgrepo-com.svg" width="20rem" alt="" />
       </div>
       <ul
@@ -39,9 +39,9 @@
 
       <div
         class="flex justify-between px-5 py-3 cursor-pointer"
-        id="districtSelector"
+        id="marketSelector"
       >
-        Select Market
+        <span>Select Market</span>
         <img src="assets/down-arrow-svgrepo-com.svg" width="20rem" alt="" />
       </div>
       <ul
@@ -51,10 +51,19 @@
         <li class="text-xl py-0.5 px-5 hover:bg-gray-100">Helly</li>
       </ul>
 
-      <div class="flex justify-between px-5 py-3">
-        Select Commodity
+      <div
+        class="flex justify-between px-5 py-3 cursor-pointer"
+        id="commoditySelector"
+      >
+        <span>Select Commodity</span>
         <img src="assets/down-arrow-svgrepo-com.svg" width="20rem" alt="" />
       </div>
+      <ul
+        class="bg-gray-50 hidden absolute w-1/2 overflow-y-auto max-h-40"
+        id="commodityList"
+      >
+        <li class="text-xl py-0.5 px-5 hover:bg-gray-100">Helly</li>
+      </ul>
     </div>
   </body>
 </html>
