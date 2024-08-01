@@ -5,9 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>knowyouronion</title>
     <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
     <script defer src="index.js"></script>
   </head>
   <body class="flex bg-gray-50 items-center justify-center h-screen">
+    <div id="map" class="absolute top-0 bottom-0 w-full"></div>
+    <br />
+    <button
+      id="fly"
+      class="block relative mx-0 my-auto w-2/4 h-40 p-10 border-none rounded-sm text-lg text-center"
+    >
+      Fly
+    </button>
+    <script>
+      mapboxgl.accessToken = {};
+      const map = new mapboxgl.Map({
+        container: "map",
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: "mapbox://styles/mapbox/streets-v12",
+        center: [-74.5, 40],
+        zoom: 4,
+      });
+
+      document.getElementById("fly").addEventListener("click", () => {
+        // Fly to a random location
+        map.flyTo({
+          center: [(Math.random() - 0.5) * 360, (Math.random() - 0.5) * 100],
+          essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+        });
+      });
+    </script>
     <div
       class="w-2/4 bg-white flex-col rounded-xl justify-between items-center shadow-lg text-2xl shadow-indigo-100/55"
     >
