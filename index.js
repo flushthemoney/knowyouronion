@@ -12,7 +12,7 @@ function revertName(string, spanObject) {
   spanObject.textContent = string;
 }
 
-var url = `https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=${process.env.GOVT_API_KEY}&format=json&limit=200000`;
+//var url = `https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=${process.env.GOVT_API_KEY}&format=json&limit=200000`;
 
 window.onload = function () {
   // fetch(url)
@@ -96,7 +96,7 @@ window.onload = function () {
     selectedDistrict = event.target.innerHTML;
     districtSelectorSpan.textContent = selectedDistrict;
     districtList.classList.toggle("hidden");
-    fetch("./nested_data.jpk.eyJ1IjoiZmx1c2h0aGVtb25leSIsImEiOiJjbHpiZWozMWwwMGZuMmxzMTdkNHVzeGd1In0.kORLMOkqZgK03yKAiwvXOg"son")
+    fetch("./nested_data.json")
       .then((res) => res.json())
       .then((data) => {
         const districtData = data[selectedState][selectedDistrict];
