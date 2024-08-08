@@ -14,3 +14,5 @@ The aim of the project is to empower farmers and consumers to be able to make in
 - TailWind
 - HTML
 - JavaScript
+
+**NOTE** _: The project is under development, contribution guidelines and setup instructions will be added after v1 of the project is released_
