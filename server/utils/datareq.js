@@ -3,7 +3,7 @@ const fs = require("fs");
 const dotenv = require("dotenv");
 dotenv.config();
 
-async function fetchDataAndSave() {
+async function reqData() {
   try {
     const apiUrl = `${process.env.URL}`;
 
@@ -14,7 +14,7 @@ async function fetchDataAndSave() {
     const records = jsonData.records || [];
 
     const jsonString = JSON.stringify(records, null, 2);
-    const filePath = "data.json";
+    const filePath = "./data/data.json";
 
     fs.writeFile(filePath, jsonString, (err) => {
       if (err) {
@@ -37,4 +37,4 @@ async function fetchDataAndSave() {
   }
 }
 
-fetchDataAndSave();
+module.exports = reqData;
